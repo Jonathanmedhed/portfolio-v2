@@ -52,6 +52,128 @@ textarea {
 }
 
 /**
+ * Input Switch 
+ */
+
+.switch-currency {
+  z-index: 2;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.8rem;
+  color: black;
+  img {
+    max-width: 2rem;
+    object-fit: cover;
+  }
+  .spanish {
+    margin-right: 0.5rem;
+  }
+  .british {
+    margin-left: 0.5rem;
+  }
+  @media (max-width: 75rem) {
+    top: 0.7rem;
+    right: 1rem;
+  }
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(238, 184, 46);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider-simple {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $gray-color;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider-simple:before {
+  position: absolute;
+  content: '';
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider,
+input:checked + .slider-simple {
+  background-color: rgb(0, 0, 194);
+}
+
+input:focus + .slider,
+input:focus + .slider-simple {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before,
+input:checked + .slider-simple:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round,
+.slider-simple.round {
+  border-radius: 34px;
+}
+
+.slider.round:before,
+.slider-simple.round:before {
+  border-radius: 50%;
+}
+
+/**
 Main
 */
 .main {
@@ -326,6 +448,11 @@ Main
               object-fit: cover;
               margin-right: 3rem;
             }
+            .big-img {
+              max-width: 5rem;
+              object-fit: cover;
+              margin-right: 2rem;
+            }
           }
           .card-body {
             font-weight: bold;
@@ -416,13 +543,14 @@ Main
         .project {
           display: flex;
           flex-direction: column;
-          max-width: 15rem;
+          max-width: 17rem;
           padding-bottom: 0.5rem;
           margin: 0.5rem;
           box-shadow: 1px 1px 1px 1px $font-color;
           img {
             object-fit: cover;
-            max-width: 15rem;
+            max-width: 17rem;
+            min-height: 8rem;
           }
           .project-body {
             display: flex;
@@ -496,10 +624,11 @@ Main
     padding: 0 0;
     .navbar {
       position: fixed;
-      top: 8%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: unset;
+      top: 0;
+      top: 0;
+      left: unset;
+      transform: unset;
+      width: 100%;
       background-color: $white-light-color;
       .my-info {
         display: flex;
@@ -522,7 +651,7 @@ Main
         margin-right: 0;
         .option,
         .option-selected {
-          width: 25%;
+          min-width: 25%;
           display: flex;
           flex-direction: column;
           align-items: center;

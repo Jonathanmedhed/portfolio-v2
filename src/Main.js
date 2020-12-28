@@ -1,4 +1,6 @@
 import React, { useState, createRef } from 'react'
+
+// Images
 import profileImg from './images/descarga.jpg'
 import ucLogo from './images/UC_logo.png'
 import cctLogo from './images/cct.png'
@@ -8,9 +10,16 @@ import myOnlineShopImg from './images/myonlineshop.png'
 import componetsImg from './images/components.png'
 import portfolioImg from './images/portfolio.png'
 import easyPeasyImg from './images/easypeasy.png'
+import farmatodoImg from './images/farmatodo.jpg'
+import groupImg from './images/group.png'
+
+// Components
+import LanguageSwitch from './LanguageSwitch'
 
 const Main = () => {
 	const [option, setOption] = useState('about')
+
+	const [language, setLanguage] = useState('spanish')
 
 	let aboutRef = createRef()
 	let resumeRef = createRef()
@@ -40,36 +49,37 @@ const Main = () => {
 
 	return (
 		<div className="main">
+			<LanguageSwitch setValue={setLanguage} value={language} />
 			{/**
 			 * Navbar
 			 */}
 			<div className="navbar">
 				<div className="my-info">
 					<h1>Jonathan Medina</h1>
-					<h3>Web Developer</h3>
+					<h3>{language === 'english' ? 'Web Developer' : 'Desarrollador Web'}</h3>
 				</div>
 				<div className="options">
 					<span onClick={() => goTo('about')} className={option !== 'about' ? 'option' : 'option-selected'}>
 						<i className="fas fa-user"></i>
-						<span className="text">about</span>
+						<span className="text">{language === 'english' ? 'about' : 'sobre mi'}</span>
 					</span>
 					<span onClick={() => goTo('resume')} className={option !== 'resume' ? 'option' : 'option-selected'}>
 						<i className="fas fa-file-alt"></i>
-						<span className="text">resume</span>
+						<span className="text">{language === 'english' ? 'resume' : 'cv'}</span>
 					</span>
 					<span
 						onClick={() => goTo('projects')}
 						className={option !== 'projects' ? 'option' : 'option-selected'}
 					>
 						<i className="fas fa-laptop"></i>
-						<span className="text">projects</span>
+						<span className="text">{language === 'english' ? 'projects' : 'proyectos'}</span>
 					</span>
 					<span
 						onClick={() => goTo('contact')}
 						className={option !== 'contact' ? 'option' : 'option-selected'}
 					>
 						<i className="fas fa-mail-bulk"></i>
-						<span className="text">contact</span>
+						<span className="text">{language === 'english' ? 'contact' : 'contacto'}</span>
 					</span>
 				</div>
 			</div>
@@ -80,7 +90,7 @@ const Main = () => {
 				<img src={profileImg} alt="profile-pic"></img>
 				<div className="profile-body">
 					<h1>Jonathan Medina</h1>
-					<h3>Web Developer</h3>
+					<h3>{language === 'english' ? 'Web Developer' : 'Desarrollador Web'}</h3>
 					<div className="socials">
 						<a target="_blank" rel="noopener noreferrer" href={'https://github.com/Jonathanmedhed'}>
 							<i className="fab fa-github"></i>
@@ -101,10 +111,10 @@ const Main = () => {
 						href={'https://drive.google.com/file/d/1K4J48Ul0AJn_4_hiFmIJ1WnxdPC5Qo2u/view?usp=sharing'}
 						className="button"
 					>
-						download cv
+						{language === 'english' ? 'download cv' : 'descargar cv'}
 					</a>
 					<div onClick={() => goTo('contact')} className="button">
-						contact me
+						{language === 'english' ? 'contact me' : 'contacto'}
 					</div>
 				</div>
 			</div>
@@ -117,31 +127,59 @@ const Main = () => {
 				 */}
 				<div ref={aboutRef} className={option === 'about' ? 'section' : 'section-closed'}>
 					<h1 className="top">
-						<span>About</span> Me
+						{language === 'english' ? (
+							<>
+								<span>About</span> Me
+							</>
+						) : (
+							<>
+								<span>C</span>ontacto
+							</>
+						)}
 					</h1>
 					<div className="text-list">
 						<div className="text">
-							I am <span className="text-primary">Jonathan Medina</span>, recently obtained my bachelor's
-							degree in computer science, i'm eager to find a job as a web developer, as i really enjoy
-							building websites.
+							{language === 'english' ? (
+								<>
+									I am <span className="text-primary">Jonathan Medina</span>, recently obtained my
+									bachelor's degree in Computer Science, i'm eager to find a job as a web developer,
+									as i really enjoy building websites.
+								</>
+							) : (
+								<>
+									Soy <span className="text-primary">Jonathan Medina</span>, obtuve mi título en
+									Ciencias de la Computación recientemente, me gustaría conseguir un trabajo como
+									Desarrollador Web, ya que disfruto mucho creando paginas web.
+								</>
+							)}
 						</div>
 						<div className="list">
 							<div className="item">
-								<div className="label">Age....</div>
+								<div className="label">{language === 'english' ? 'Age....' : 'Edad....'}</div>
 								<div className="value">33</div>
 							</div>
 							<div className="item">
-								<div className="label">Residence...</div>
+								<div className="label">
+									{language === 'english' ? 'Residence...' : 'Residencia....'}
+								</div>
 								<div className="value">Venezuela</div>
 							</div>
 							<div className="item">
-								<div className="label">Status...</div>
-								<div className="value">Single</div>
+								<div className="label">{language === 'english' ? 'Status...' : 'Estado Civil...'}</div>
+								<div className="value">{language === 'english' ? 'Single' : 'Soltero'}</div>
 							</div>
 						</div>
 					</div>
 					<h1 className="top">
-						<span>My</span> Hobbies
+						{language === 'english' ? (
+							<>
+								<span>My</span> Hobbies
+							</>
+						) : (
+							<>
+								<span>Mis</span> Hobbies
+							</>
+						)}
 					</h1>
 					<div className="icon-list">
 						<i className="fas fa-book"></i>
@@ -156,7 +194,15 @@ const Main = () => {
 				 */}
 				<div ref={resumeRef} className={option === 'resume' ? 'section' : 'section-closed'}>
 					<h1 className="top">
-						<span>R</span>esume
+						{language === 'english' ? (
+							<>
+								<span>R</span>esume
+							</>
+						) : (
+							<>
+								<span>C</span>V
+							</>
+						)}
 					</h1>
 					{/**
 					 * Education
@@ -164,7 +210,7 @@ const Main = () => {
 					<div className="text-cards">
 						<div className="cards-title">
 							<i className="fas fa-university"></i>
-							<span>education</span>
+							<span>{language === 'english' ? 'education' : 'educación'}</span>
 						</div>
 						<div className="card">
 							<div className="card-top">
@@ -172,11 +218,17 @@ const Main = () => {
 									<div className="date">2016 - 2019</div>
 									<div className="card-title">CCT</div>
 									<div className="card-sub-title">College of Computing Technology</div>
-									<div className="location">Dulin - Ireland</div>
+									<div className="location">
+										{language === 'english' ? 'Dublin - Ireland' : 'Dublín - Irlanda'}
+									</div>
 								</div>
 								<img src={cctLogo} alt="cct-logo"></img>
 							</div>
-							<div className="card-body">Bachelor's Degree in Computer Science</div>
+							<div className="card-body">
+								{language === 'english'
+									? "Bachelor's Degree en Computer Science"
+									: "Bachelor's en Ciencias de la Computación"}
+							</div>
 							<div className="card-line"></div>
 						</div>
 						<div className="card">
@@ -184,12 +236,18 @@ const Main = () => {
 								<div className="card-top-left">
 									<div className="date">2009 - 2014</div>
 									<div className="card-title">UC</div>
-									<div className="card-sub-title">University of Carabobo</div>
+									<div className="card-sub-title">
+										{language === 'english' ? 'University of Carabobo' : 'Universidad de Carabobo'}
+									</div>
 									<div className="location">Aragua - Venezuela</div>
 								</div>
 								<img className="tall-logo" src={ucLogo} alt="uc-logo"></img>
 							</div>
-							<div className="card-body">Honor's Degree in Administration</div>
+							<div className="card-body">
+								{language === 'english'
+									? "Honor's Degree in Administration"
+									: 'Licenciatura en Administración Comercial'}
+							</div>
 							<div className="card-line"></div>
 						</div>
 					</div>
@@ -199,17 +257,26 @@ const Main = () => {
 					<div className="text-cards">
 						<div className="cards-title">
 							<i className="fas fa-briefcase"></i>
-							<span>experience</span>
+							<span>{language === 'english' ? 'experience' : 'experiencia'}</span>
 						</div>
 						<div className="card">
 							<div className="card-top">
 								<div className="card-top-left">
 									<div className="date">2016 - 2019</div>
-									<div className="card-title">Different Bars, Restaurants and pubs.</div>
-									<div className="location">Dulin - Ireland</div>
+									<div className="card-title">
+										{language === 'english'
+											? 'Bars, Restaurants and pubs.'
+											: 'Bares, Restaurantes y pubs'}
+									</div>
+									<div className="location">
+										{language === 'english' ? 'Dublin - Ireland' : 'Dublín - Irlanda'}
+									</div>
 								</div>
+								<img src={groupImg} alt="restaurants"></img>
 							</div>
-							<div className="card-body">Waiter and Barman</div>
+							<div className="card-body">
+								{language === 'english' ? 'Waiter and Barman' : 'Mesero y Barman'}
+							</div>
 							<div className="card-line"></div>
 						</div>
 						<div className="card">
@@ -217,11 +284,16 @@ const Main = () => {
 								<div className="card-top-left">
 									<div className="date">2010 - 2013</div>
 									<div className="card-title">Farmatodo</div>
-									<div className="card-sub-title">Pharmacy / Retailer</div>
-									<div className="location">Aragua Venezuela</div>
+									<div className="card-sub-title">
+										{language === 'english' ? 'Pharmacy / Retailer' : 'Farmacia / Minorista'}
+									</div>
+									<div className="location">Aragua - Venezuela</div>
 								</div>
+								<img className="big-img" src={farmatodoImg} alt="farmatodo"></img>
 							</div>
-							<div className="card-body">Floor Staff</div>
+							<div className="card-body">
+								{language === 'english' ? 'Floor Staff' : 'Asistente de Ventas'}
+							</div>
 							<div className="card-line"></div>
 						</div>
 					</div>
@@ -229,7 +301,15 @@ const Main = () => {
 					 *  Skills
 					 */}
 					<h1 className="top mt-1">
-						<span>My</span> Skills
+						{language === 'english' ? (
+							<>
+								<span>My</span> Skills
+							</>
+						) : (
+							<>
+								<span>H</span>abilidades
+							</>
+						)}
 					</h1>
 					{/**
 					 * Front end
@@ -279,7 +359,7 @@ const Main = () => {
 					<div className="text-cards">
 						<div className="cards-title">
 							<i className="fas fa-database"></i>
-							<span>databases</span>
+							<span>{language === 'english' ? 'databases' : 'bases de datos'}</span>
 						</div>
 						<div className="items-list">
 							<div className="item">
@@ -298,7 +378,7 @@ const Main = () => {
 					<div className="text-cards">
 						<div className="cards-title">
 							<i className="fas fa-laptop-code"></i>
-							<span>languages</span>
+							<span>{language === 'english' ? 'languages' : 'lenguages'}</span>
 						</div>
 						<div className="items-list">
 							<div className="item">
@@ -313,7 +393,15 @@ const Main = () => {
 				 */}
 				<div ref={projectsRef} className={option === 'projects' ? 'section' : 'section-closed'}>
 					<h1 className="top">
-						<span>My</span> Projects
+						{language === 'english' ? (
+							<>
+								<span>My</span> Projects
+							</>
+						) : (
+							<>
+								<span>Mis</span> Proyectos
+							</>
+						)}
 					</h1>
 					<div className="project-list">
 						{/**
@@ -322,16 +410,20 @@ const Main = () => {
 						<div className="project">
 							<img src={heddrichImg} atl="heddrich-solutions"></img>
 							<div className="project-body">
-								<span className="date">Dec 2020</span>
-								<h3>Web Design Services</h3>
-								<p>Website to offer my services as a e-commerce web developer.</p>
+								<span className="date">{language === 'english' ? 'Dec' : 'Dic'} 2020</span>
+								<h3>{language === 'english' ? 'Web Design Services' : 'Servicios de Diseño Web'}</h3>
+								<p>
+									{language === 'english'
+										? 'Website to offer my services as a e-commerce web developer.'
+										: 'Página para ofrecer mis servicios de desarrollador para comercios electrónicos'}
+								</p>
 								<a
 									target="_blank"
 									rel="noopener noreferrer"
 									href={'https://heddrichitsoluciones.herokuapp.com/'}
 									className="btn btn-primary"
 								>
-									View
+									{language === 'english' ? 'Visit' : 'Visitar'}
 								</a>
 							</div>
 						</div>
@@ -342,15 +434,21 @@ const Main = () => {
 							<img src={ecommerceImg} atl="ecommerce"></img>
 							<div className="project-body">
 								<span className="date">Nov 2020</span>
-								<h3>eCommerce Website</h3>
-								<p>eCommerce website for the Venezuelan market.</p>
+								<h3>
+									{language === 'english' ? 'eCommerce Website' : 'Página de Comercio Electrónico'}
+								</h3>
+								<p>
+									{language === 'english'
+										? 'eCommerce website for the Venezuelan market.'
+										: 'Comercio Electrónico para el mercado Venezolano'}
+								</p>
 								<a
 									target="_blank"
 									rel="noopener noreferrer"
 									href={'https://ecommercespanish.herokuapp.com/'}
 									className="btn btn-primary"
 								>
-									View
+									{language === 'english' ? 'Visit' : 'Visitar'}
 								</a>
 							</div>
 						</div>
@@ -360,16 +458,24 @@ const Main = () => {
 						<div className="project">
 							<img src={myOnlineShopImg} atl="my online shop"></img>
 							<div className="project-body">
-								<span className="date">Aug 2020</span>
-								<h3>Online Shop Creator Website</h3>
-								<p>Website that allows users to create an online shop for free.</p>
+								<span className="date">{language === 'english' ? 'Aug' : 'Ago'} 2020</span>
+								<h3>
+									{language === 'english'
+										? 'Online Shop Creator Website'
+										: 'Creador de Tiendas en Línea'}
+								</h3>
+								<p>
+									{language === 'english'
+										? 'Website that allows users to create an online shop for free.'
+										: 'Página que permite crear tiendas en línea de forma gratuita.'}
+								</p>
 								<a
 									target="_blank"
 									rel="noopener noreferrer"
 									href={'https://myonlineshopvzla.herokuapp.com/'}
 									className="btn btn-primary"
 								>
-									View
+									{language === 'english' ? 'Visit' : 'Visitar'}
 								</a>
 							</div>
 						</div>
@@ -379,16 +485,22 @@ const Main = () => {
 						<div className="project">
 							<img src={componetsImg} atl="my online shop"></img>
 							<div className="project-body">
-								<span className="date">Apr 2020</span>
-								<h3>My Components Website</h3>
-								<p>Website to showcase my react components for personal use.</p>
+								<span className="date">{language === 'english' ? 'Apr' : 'Abr'} 2020</span>
+								<h3>
+									{language === 'english' ? 'My Components Website' : 'Página de mis Componentes'}
+								</h3>
+								<p>
+									{language === 'english'
+										? 'Website to showcase my react components for personal use.'
+										: 'Página de uso personal, para mostrar mis componentes react.'}
+								</p>
 								<a
 									target="_blank"
 									rel="noopener noreferrer"
 									href={'https://react-components-vzla.herokuapp.com/'}
 									className="btn btn-primary"
 								>
-									View
+									{language === 'english' ? 'Visit' : 'Visitar'}
 								</a>
 							</div>
 						</div>
@@ -399,15 +511,19 @@ const Main = () => {
 							<img src={portfolioImg} atl="portfolio"></img>
 							<div className="project-body">
 								<span className="date">Feb 2020</span>
-								<h3>My Old Portfolio</h3>
-								<p>Website to showcase my personal development projects.</p>
+								<h3>{language === 'english' ? 'My Old Portfolio' : 'Mi Viejo Portafolio'}</h3>
+								<p>
+									{language === 'english'
+										? 'Website to showcase my personal development projects.'
+										: 'Página para mostrar mis proyectos personales de desarrollo web'}
+								</p>
 								<a
 									target="_blank"
 									rel="noopener noreferrer"
 									href={'https://portfolio-jonathanvzla.herokuapp.com/'}
 									className="btn btn-primary"
 								>
-									View
+									{language === 'english' ? 'Visit' : 'Visitar'}
 								</a>
 							</div>
 						</div>
@@ -417,16 +533,20 @@ const Main = () => {
 						<div className="project">
 							<img src={easyPeasyImg} atl="portfolio"></img>
 							<div className="project-body">
-								<span className="date">Dec 2019</span>
-								<h3>College Project</h3>
-								<p>Website that allows small business to order products from different suppliers.</p>
+								<span className="date">{language === 'english' ? 'Dec' : 'Dic'} 2019</span>
+								<h3>{language === 'english' ? 'College Project' : 'Proyecto Universitario'}</h3>
+								<p>
+									{language === 'english'
+										? 'Website that allows small business to order products from different suppliers.'
+										: 'Página que permite a usuarios ordenar productos a diferentes proveedores.'}
+								</p>
 								<a
 									target="_blank"
 									rel="noopener noreferrer"
 									href={'https://easy-peasy-v2.herokuapp.com/'}
 									className="btn btn-primary"
 								>
-									View
+									{language === 'english' ? 'Visit' : 'Visitar'}
 								</a>
 							</div>
 						</div>
@@ -437,7 +557,15 @@ const Main = () => {
 				 */}
 				<div ref={contactRef} className={option === 'contact' ? 'section' : 'section-closed'}>
 					<h1 className="top">
-						<span>Contact</span> Me
+						{language === 'english' ? (
+							<>
+								<span>Contact</span> Me
+							</>
+						) : (
+							<>
+								<span>C</span>ontacto
+							</>
+						)}
 					</h1>
 					<div className="contact-list">
 						<div className="show-sm">
