@@ -266,7 +266,7 @@ const Main = () => {
 						<div className="card">
 							<div className="card-top">
 								<div className="card-top-left">
-									<div className="date">2016 - 2019</div>
+									<div className="date">2015 - 2019</div>
 									<div className="card-title">
 										{language === 'english'
 											? 'Bars, Restaurants and pubs.'
@@ -286,7 +286,7 @@ const Main = () => {
 						<div className="card">
 							<div className="card-top">
 								<div className="card-top-left">
-									<div className="date">2010 - 2013</div>
+									<div className="date">2011 - 2014</div>
 									<div className="card-title">Farmatodo</div>
 									<div className="card-sub-title">
 										{language === 'english' ? 'Pharmacy / Retailer' : 'Farmacia / Minorista'}
