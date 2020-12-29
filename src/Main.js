@@ -108,7 +108,11 @@ const Main = () => {
 					<a
 						target="_blank"
 						rel="noopener noreferrer"
-						href={'https://drive.google.com/file/d/1K4J48Ul0AJn_4_hiFmIJ1WnxdPC5Qo2u/view?usp=sharing'}
+						href={
+							language === 'english'
+								? 'https://drive.google.com/file/d/1fruVufOd372XqOyPA3N933JcAbu3BoNp/view?usp=sharing'
+								: 'https://drive.google.com/file/d/1JVzxmZOmiFdxYktbtv6FzvHKXS_s7W2O/view?usp=sharing'
+						}
 						className="button"
 					>
 						{language === 'english' ? 'download cv' : 'descargar cv'}
@@ -133,7 +137,7 @@ const Main = () => {
 							</>
 						) : (
 							<>
-								<span>C</span>ontacto
+								<span>Sobre</span> Mí
 							</>
 						)}
 					</h1>
@@ -141,7 +145,7 @@ const Main = () => {
 						<div className="text">
 							{language === 'english' ? (
 								<>
-									I am <span className="text-primary">Jonathan Medina</span>, recently obtained my
+									I am <span className="text-primary">Jonathan Medina</span>, i have obtained my
 									bachelor's degree in Computer Science, i'm eager to find a job as a web developer,
 									as i really enjoy building websites.
 								</>
