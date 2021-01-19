@@ -3265,19 +3265,19 @@ Main
 .main .sections .section-closed .text-cards .items-list .item .fab.fa-react {
   background-color: #00d3d3;
   color: white;
-  padding: 0.4rem;
+  padding: 0.5rem;
 }
 .main .sections .section .text-cards .items-list .item .fab.fa-html5,
 .main .sections .section-closed .text-cards .items-list .item .fab.fa-html5 {
   background-color: orangered;
   color: white;
-  padding: 0.4rem 0.55rem;
+  padding: 0.5rem 0.65rem;
 }
 .main .sections .section .text-cards .items-list .item .fab.fa-css3-alt,
 .main .sections .section-closed .text-cards .items-list .item .fab.fa-css3-alt {
   background-color: #296eb4;
   color: white;
-  padding: 0.4rem 0.55rem;
+  padding: 0.5rem 0.65rem;
 }
 .main .sections .section .text-cards .items-list .item .fab.fa-sass,
 .main .sections .section-closed .text-cards .items-list .item .fab.fa-sass {
@@ -3285,11 +3285,17 @@ Main
   color: white;
   padding: 0.5rem 0.4rem 0.5rem 0.4rem;
 }
+.main .sections .section .text-cards .items-list .item .fas.fa-step-forward,
+.main .sections .section-closed .text-cards .items-list .item .fas.fa-step-forward {
+  background-color: black;
+  color: white;
+  padding: 0.5rem;
+}
 .main .sections .section .text-cards .items-list .item .fab.fa-node-js,
 .main .sections .section-closed .text-cards .items-list .item .fab.fa-node-js {
   background-color: #32ce56;
   color: white;
-  padding: 0.4rem 0.4rem 0.4rem 0.45rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.55rem;
 }
 .main .sections .section .text-cards .items-list .item .fas.fa-leaf,
 .main .sections .section-closed .text-cards .items-list .item .fas.fa-leaf {
@@ -3308,6 +3314,30 @@ Main
   background-color: gold;
   color: white;
   padding: 0.5rem;
+}
+.main .sections .section .text-cards .items-list .item .fab.fa-aws,
+.main .sections .section-closed .text-cards .items-list .item .fab.fa-aws {
+  background-color: gold;
+  color: white;
+  padding: 0.5rem 0.4rem;
+}
+.main .sections .section .text-cards .items-list .item .fas.fa-heading,
+.main .sections .section-closed .text-cards .items-list .item .fas.fa-heading {
+  background-color: purple;
+  color: white;
+  padding: 0.5rem;
+}
+.main .sections .section .text-cards .items-list .item .fab.fa-digital-ocean,
+.main .sections .section-closed .text-cards .items-list .item .fab.fa-digital-ocean {
+  background-color: blue;
+  color: white;
+  padding: 0.5rem;
+}
+.main .sections .section .text-cards .items-list .item .fab.fa-etsy,
+.main .sections .section-closed .text-cards .items-list .item .fab.fa-etsy {
+  background-color: blue;
+  color: white;
+  padding: 0.5rem 0.6rem;
 }
 .main .sections .section .text-cards .items-list .item span,
 .main .sections .section-closed .text-cards .items-list .item span {
@@ -3350,10 +3380,12 @@ Main
   color: #296eb4;
   padding: 0 0.3rem;
   font-size: 0.7rem;
+  margin-top: 0.5rem;
 }
 .main .sections .section .project-list .project .project-body h3,
 .main .sections .section-closed .project-list .project .project-body h3 {
   text-align: center;
+  margin-top: 0.5rem;
 }
 .main .sections .section .project-list .project .project-body p,
 .main .sections .section-closed .project-list .project .project-body p {
@@ -3362,7 +3394,7 @@ Main
 }
 .main .sections .section .project-list .project .btn,
 .main .sections .section-closed .project-list .project .btn {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 .main .sections .section .contact-list,
 .main .sections .section-closed .contact-list {

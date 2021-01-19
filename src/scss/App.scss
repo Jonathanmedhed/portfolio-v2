@@ -491,27 +491,32 @@ Main
             .fab.fa-react {
               background-color: rgb(0, 211, 211);
               color: $white-light-color;
-              padding: 0.4rem;
+              padding: 0.5rem;
             }
             .fab.fa-html5 {
               background-color: orangered;
               color: $white-light-color;
-              padding: 0.4rem 0.55rem;
+              padding: 0.5rem 0.65rem;
             }
             .fab.fa-css3-alt {
               background-color: $primary-color;
               color: $white-light-color;
-              padding: 0.4rem 0.55rem;
+              padding: 0.5rem 0.65rem;
             }
             .fab.fa-sass {
               background-color: pink;
               color: $white-light-color;
               padding: 0.5rem 0.4rem 0.5rem 0.4rem;
             }
+            .fas.fa-step-forward {
+              background-color: black;
+              color: $white-light-color;
+              padding: 0.5rem;
+            }
             .fab.fa-node-js {
               background-color: $success-light-color;
               color: $white-light-color;
-              padding: 0.4rem 0.4rem 0.4rem 0.45rem;
+              padding: 0.5rem 0.5rem 0.5rem 0.55rem;
             }
             .fas.fa-leaf {
               background-color: $success-color;
@@ -527,6 +532,26 @@ Main
               background-color: gold;
               color: $white-light-color;
               padding: 0.5rem;
+            }
+            .fab.fa-aws {
+              background-color: gold;
+              color: $white-light-color;
+              padding: 0.5rem 0.4rem;
+            }
+            .fas.fa-heading {
+              background-color: purple;
+              color: $white-light-color;
+              padding: 0.5rem;
+            }
+            .fab.fa-digital-ocean {
+              background-color: blue;
+              color: $white-light-color;
+              padding: 0.5rem;
+            }
+            .fab.fa-etsy {
+              background-color: blue;
+              color: $white-light-color;
+              padding: 0.5rem 0.6rem;
             }
             span {
               font-weight: bold;
@@ -563,9 +588,11 @@ Main
               color: $primary-color;
               padding: 0 0.3rem;
               font-size: 0.7rem;
+              margin-top: 0.5rem;
             }
             h3 {
               text-align: center;
+              margin-top: 0.5rem;
             }
             p {
               color: $gray-darker-color;
@@ -573,7 +600,7 @@ Main
             }
           }
           .btn {
-            margin-top: 0.5rem;
+            margin-top: 1rem;
           }
         }
       }

@@ -1,8 +1,8 @@
 import React from 'react'
 
 // Images
-import spainIcon from './images/spanish-icon.png'
-import britishIcon from './images/british-icon.jpg'
+import spainIcon from '../images/spanish-icon.png'
+import britishIcon from '../images/british-icon.jpg'
 
 const LanguageSwitch = ({ value, setValue }) => {
 	return (
