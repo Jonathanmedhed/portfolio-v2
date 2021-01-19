@@ -9,10 +9,10 @@ const Navbar = ({ goTo, language, option }) => {
 	]
 
 	const navOption = (item) => (
-		<span onClick={() => goTo(item.name)} className={option !== item.name ? 'option' : 'option-selected'}>
+		<>
 			<i className={`${item.icon}`}></i>
 			<span className="text">{language === 'english' ? item.contentEn : item.contentSp}</span>
-		</span>
+		</>
 	)
 	return (
 		<div className="navbar">
@@ -22,7 +22,13 @@ const Navbar = ({ goTo, language, option }) => {
 			</div>
 			<div className="options">
 				{options.map((item) => (
-					<span key={item.name}>{navOption(item)}</span>
+					<span
+						key={item.name}
+						onClick={() => goTo(item.name)}
+						className={option !== item.name ? 'option' : 'option-selected'}
+					>
+						{navOption(item)}
+					</span>
 				))}
 			</div>
 		</div>
