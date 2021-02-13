@@ -31,7 +31,7 @@ const Projects = ({ projectsRef, language, option }) => {
 			titleSp: 'Página de Comercio Electrónico',
 			contentEn: 'eCommerce website for the Venezuelan market.',
 			contentSp: 'Comercio Electrónico para el mercado Venezolano.',
-			link: 'https://ecommercespanish.herokuapp.com/',
+			link: 'https://heddrichecommerce.xyz/',
 		},
 		{
 			img: myOnlineShopImg,
