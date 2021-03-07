@@ -5,6 +5,7 @@ import ucLogo from '../images/UC_logo.png'
 import cctLogo from '../images/cct.png'
 import farmatodoImg from '../images/farmatodo.jpg'
 import groupImg from '../images/group.png'
+import biekosImg from '../images/biekos.png'
 import Title from './Title'
 
 const Resume = ({ resumeRef, language, option }) => {
@@ -61,6 +62,22 @@ const Resume = ({ resumeRef, language, option }) => {
 
 	const experienceTemplate = () => (
 		<div className="text-cards">
+			<div className="card">
+				<div className="card-top">
+					<div className="card-top-left">
+						<div className="date">2/2021 - 5/2021</div>
+						<div className="card-title">{language === 'english' ? 'Biekos' : 'Biekos'}</div>
+						<div className="location">
+							{language === 'english' ? 'Lysaker – Norway (Remote)' : 'Lysaker – Noruega (Remoto)'}
+						</div>
+					</div>
+					<img src={biekosImg} alt="restaurants"></img>
+				</div>
+				<div className="card-body">
+					{language === 'english' ? 'Front-End Developer Junior' : 'Desarrollador Front-End Junior'}
+				</div>
+				<div className="card-line"></div>
+			</div>
 			<div className="card">
 				<div className="card-top">
 					<div className="card-top-left">
@@ -130,7 +147,10 @@ const Resume = ({ resumeRef, language, option }) => {
 			titleEn: 'languages',
 			titleSp: 'lenguages',
 			icon: 'fas fa-laptop-code',
-			items: [{ name: 'Javascript', icon: 'fab fa-js-square' }],
+			items: [
+				{ name: 'Javascript', icon: 'fab fa-js-square' },
+				{ name: 'Python', icon: 'fab fa-python' },
+			],
 		},
 		{
 			titleEn: 'deployment',
@@ -140,6 +160,16 @@ const Resume = ({ resumeRef, language, option }) => {
 				{ name: 'AWS', icon: 'fab fa-aws' },
 				{ name: 'Heroku', icon: 'fas fa-heading' },
 				{ name: 'Digital Ocean', icon: 'fab fa-digital-ocean' },
+			],
+		},
+		{
+			titleEn: 'other',
+			titleSp: 'otras',
+			icon: 'fas fa-laptop-house',
+			items: [
+				{ name: 'GitHub', icon: 'fab fa-github-alt' },
+				{ name: 'Phabricator', icon: 'fab fa-phabricator' },
+				{ name: 'Selenium', icon: 'far fa-check-square' },
 			],
 		},
 	]
@@ -162,10 +192,6 @@ const Resume = ({ resumeRef, language, option }) => {
 		<div ref={resumeRef} className={option === 'resume' ? 'section' : 'section-closed'}>
 			<Title language={language} english={['R', 'esume']} spanish={['C', 'V']} />
 			{/**
-			 * Education
-			 */}
-			{educationTemplate()}
-			{/**
 			 *  Skills
 			 */}
 			<Title language={language} english={['My', ' Skills']} spanish={['H', 'abilidades']} />
@@ -177,6 +203,10 @@ const Resume = ({ resumeRef, language, option }) => {
 			 */}
 			<Title language={language} english={['E', 'xperience']} spanish={['E', 'xperiencia']} />
 			{experienceTemplate()}
+			{/**
+			 * Education
+			 */}
+			{educationTemplate()}
 		</div>
 	)
 }

@@ -488,8 +488,18 @@ Main
               border-radius: 50%;
               margin-right: 0.2rem;
             }
+            .fab.fa-python {
+              background-color: rgba(4, 0, 211, 0.808);
+              color: $white-light-color;
+              padding: 0.5rem;
+            }
             .fab.fa-react {
               background-color: rgb(0, 211, 211);
+              color: $white-light-color;
+              padding: 0.5rem;
+            }
+            .fab.fa-github-alt {
+              background-color: orangered;
               color: $white-light-color;
               padding: 0.5rem;
             }
@@ -552,6 +562,16 @@ Main
               background-color: blue;
               color: $white-light-color;
               padding: 0.5rem 0.6rem;
+            }
+            .fab.fa-phabricator {
+              background-color: #4a5f88;
+              color: $white-light-color;
+              padding: 0.5rem;
+            }
+            .far.fa-check-square {
+              background-color: #43b02a;
+              color: $white-light-color;
+              padding: 0.5rem;
             }
             span {
               font-weight: bold;

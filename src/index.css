@@ -3261,9 +3261,21 @@ Main
   border-radius: 50%;
   margin-right: 0.2rem;
 }
+.main .sections .section .text-cards .items-list .item .fab.fa-python,
+.main .sections .section-closed .text-cards .items-list .item .fab.fa-python {
+  background-color: rgba(4, 0, 211, 0.808);
+  color: white;
+  padding: 0.5rem;
+}
 .main .sections .section .text-cards .items-list .item .fab.fa-react,
 .main .sections .section-closed .text-cards .items-list .item .fab.fa-react {
   background-color: #00d3d3;
+  color: white;
+  padding: 0.5rem;
+}
+.main .sections .section .text-cards .items-list .item .fab.fa-github-alt,
+.main .sections .section-closed .text-cards .items-list .item .fab.fa-github-alt {
+  background-color: orangered;
   color: white;
   padding: 0.5rem;
 }
@@ -3338,6 +3350,18 @@ Main
   background-color: blue;
   color: white;
   padding: 0.5rem 0.6rem;
+}
+.main .sections .section .text-cards .items-list .item .fab.fa-phabricator,
+.main .sections .section-closed .text-cards .items-list .item .fab.fa-phabricator {
+  background-color: #4a5f88;
+  color: white;
+  padding: 0.5rem;
+}
+.main .sections .section .text-cards .items-list .item .far.fa-check-square,
+.main .sections .section-closed .text-cards .items-list .item .far.fa-check-square {
+  background-color: #43b02a;
+  color: white;
+  padding: 0.5rem;
 }
 .main .sections .section .text-cards .items-list .item span,
 .main .sections .section-closed .text-cards .items-list .item span {
