@@ -6,14 +6,15 @@ const AboutMe = ({ aboutRef, language, option }) => {
 		<div className="text">
 			{language === 'english' ? (
 				<>
-					I am <span className="text-primary">Jonathan Medina</span>, i have obtained my bachelor's degree in
-					Computer Science, i'm eager to find a job as a web developer, as i really enjoy building websites.
+					I am <span className="text-primary">Jonathan Medina</span>, i really enjoy building websites, so i'm
+					looking for a job where i could show my skills and gain more experience, while helping my employer
+					achieve their goals.
 				</>
 			) : (
 				<>
-					Soy <span className="text-primary">Jonathan Medina</span>, obtuve mi título en Ciencias de la
-					Computación recientemente, me gustaría conseguir un trabajo como Desarrollador Web, ya que disfruto
-					mucho creando paginas web.
+					Soy <span className="text-primary">Jonathan Medina</span>, disfruto mucho creando paginas web, por
+					eso busco un trabajo donde pueda mostrar mis hablilidades y ganar mas experiencia, ayudando a mi
+					empleador a conseguir sus metas en el proceso.
 				</>
 			)}
 		</div>
