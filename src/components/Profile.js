@@ -29,8 +29,8 @@ const Profile = ({ goTo, language }) => {
 					rel="noopener noreferrer"
 					href={
 						language === 'english'
-							? 'https://drive.google.com/file/d/13RDQF_E1O5re-MG3vo59CqXVKXQWSh41/view?usp=sharing'
-							: 'https://drive.google.com/file/d/1JJro1XqryJuj0DvTWloCi9ii3DJAL_fy/view?usp=sharing'
+							? 'https://drive.google.com/file/d/1Gq8DHHYlaysSTnVSqMHPGOPWfwi12TVS/view?usp=sharing'
+							: 'https://drive.google.com/file/d/1LbClQEWKyv7_R2WDOcb6KiESA2eRLtsq/view?usp=sharing'
 					}
 					className="button"
 				>
