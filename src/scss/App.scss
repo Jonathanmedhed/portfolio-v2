@@ -220,7 +220,8 @@ Main
     }
   }
 
-  .profile {
+  .profile,
+  .profile--loaded {
     display: flex;
     flex-direction: column;
     background-color: $white-light-color;
@@ -237,6 +238,13 @@ Main
       min-height: 20rem;
       object-fit: cover;
       border-radius: 10px 20px;
+    }
+
+    .picture {
+      display: none;
+    }
+    .loader {
+      display: unset;
     }
     .profile-body {
       display: flex;
@@ -288,6 +296,15 @@ Main
           border-left: solid 1px $gray-light-color;
         }
       }
+    }
+  }
+
+  .profile--loaded {
+    .picture {
+      display: unset;
+    }
+    .loader {
+      display: none;
     }
   }
 
@@ -727,7 +744,8 @@ Main
       }
     }
 
-    .profile {
+    .profile,
+    .profile--loaded {
       display: flex;
       flex-direction: column;
       background-color: $white-light-color;
@@ -1192,7 +1210,8 @@ Main
       }
     }
 
-    .profile {
+    .profile,
+    .profile--loaded {
       display: flex;
       flex-direction: column;
       background-color: $white-light-color;

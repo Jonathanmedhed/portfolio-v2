@@ -1,12 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Images
 import profileImg from '../images/descarga.jpg'
+import loadingImg from '../images/loading.svg'
 
 const Profile = ({ goTo, language }) => {
+	const [loaded, setLoaded] = useState(false)
+
 	return (
-		<div className="profile">
-			<img src={profileImg} alt="profile-pic"></img>
+		<div className={loaded ? 'profile--loaded' : 'profile'}>
+			<img alt="loading" className="loader" src={loadingImg}></img>
+			<img alt="profile-pic" className="picture" onLoad={() => setLoaded(true)} src={profileImg}></img>
 			<div className="profile-body">
 				<h1>Jonathan Medina</h1>
 				<h3>{language === 'english' ? 'Web Developer' : 'Desarrollador Web'}</h3>

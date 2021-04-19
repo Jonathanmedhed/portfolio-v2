@@ -2961,7 +2961,8 @@ Main
 .main .navbar .options .option-selected {
   color: #296eb4;
 }
-.main .profile {
+.main .profile,
+.main .profile--loaded {
   display: flex;
   flex-direction: column;
   background-color: white;
@@ -2972,7 +2973,8 @@ Main
   box-shadow: 1px 1px 1px 1px #333;
   margin-right: 0.15rem;
 }
-.main .profile img {
+.main .profile img,
+.main .profile--loaded img {
   max-width: 30rem;
   min-width: 30rem;
   max-height: 20rem;
@@ -2980,31 +2982,46 @@ Main
   object-fit: cover;
   border-radius: 10px 20px;
 }
-.main .profile .profile-body {
+.main .profile .picture,
+.main .profile--loaded .picture {
+  display: none;
+}
+.main .profile .loader,
+.main .profile--loaded .loader {
+  display: unset;
+}
+.main .profile .profile-body,
+.main .profile--loaded .profile-body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.main .profile .profile-body h1 {
+.main .profile .profile-body h1,
+.main .profile--loaded .profile-body h1 {
   margin-top: 1rem;
   font-size: 1.8rem;
 }
-.main .profile .profile-body h3 {
+.main .profile .profile-body h3,
+.main .profile--loaded .profile-body h3 {
   color: #296eb4;
   text-align: center;
   font-size: 1.1rem;
 }
-.main .profile .profile-body .socials a {
+.main .profile .profile-body .socials a,
+.main .profile--loaded .profile-body .socials a {
   color: #296eb4;
 }
-.main .profile .profile-body .socials a i {
+.main .profile .profile-body .socials a i,
+.main .profile--loaded .profile-body .socials a i {
   font-size: 1.5rem;
   padding: 1rem 0.5rem;
 }
-.main .profile .profile-body .socials a:hover {
+.main .profile .profile-body .socials a:hover,
+.main .profile--loaded .profile-body .socials a:hover {
   color: #035eb9;
 }
-.main .profile .profile-footer {
+.main .profile .profile-footer,
+.main .profile--loaded .profile-footer {
   display: flex;
   flex-direction: row;
   border-bottom-left-radius: 30px;
@@ -3012,7 +3029,8 @@ Main
   overflow-y: hidden;
   overflow-x: hidden;
 }
-.main .profile .profile-footer .button {
+.main .profile .profile-footer .button,
+.main .profile--loaded .profile-footer .button {
   width: 50%;
   background-color: white;
   color: #333;
@@ -3022,12 +3040,20 @@ Main
   text-transform: uppercase;
   text-align: center;
 }
-.main .profile .profile-footer .button:hover {
+.main .profile .profile-footer .button:hover,
+.main .profile--loaded .profile-footer .button:hover {
   cursor: pointer;
   color: #296eb4;
 }
-.main .profile .profile-footer .button:last-child {
+.main .profile .profile-footer .button:last-child,
+.main .profile--loaded .profile-footer .button:last-child {
   border-left: solid 1px #d6d6d6;
+}
+.main .profile--loaded .picture {
+  display: unset;
+}
+.main .profile--loaded .loader {
+  display: none;
 }
 .main .sections {
   min-width: 40rem;
@@ -3540,7 +3566,8 @@ Main
   }
 }
 @media (max-width: 75rem) {
-  .main .profile {
+  .main .profile,
+.main .profile--loaded {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -3552,7 +3579,8 @@ Main
     margin-right: 0;
     margin-top: 7rem;
   }
-  .main .profile img {
+  .main .profile img,
+.main .profile--loaded img {
     max-width: 40rem;
     min-width: 40rem;
     max-height: 20rem;
@@ -3561,31 +3589,38 @@ Main
     border-top-right-radius: 25px;
     object-fit: cover;
   }
-  .main .profile .profile-body {
+  .main .profile .profile-body,
+.main .profile--loaded .profile-body {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .main .profile .profile-body h1 {
+  .main .profile .profile-body h1,
+.main .profile--loaded .profile-body h1 {
     margin-top: 1rem;
     font-size: 1.8rem;
   }
-  .main .profile .profile-body h3 {
+  .main .profile .profile-body h3,
+.main .profile--loaded .profile-body h3 {
     color: #296eb4;
     text-align: center;
     font-size: 1.1rem;
   }
-  .main .profile .profile-body .socials a {
+  .main .profile .profile-body .socials a,
+.main .profile--loaded .profile-body .socials a {
     color: #296eb4;
   }
-  .main .profile .profile-body .socials a i {
+  .main .profile .profile-body .socials a i,
+.main .profile--loaded .profile-body .socials a i {
     font-size: 1.5rem;
     padding: 1rem 0.5rem;
   }
-  .main .profile .profile-body .socials a:hover {
+  .main .profile .profile-body .socials a:hover,
+.main .profile--loaded .profile-body .socials a:hover {
     color: #035eb9;
   }
-  .main .profile .profile-footer {
+  .main .profile .profile-footer,
+.main .profile--loaded .profile-footer {
     display: flex;
     flex-direction: row;
     border-bottom-left-radius: 30px;
@@ -3593,7 +3628,8 @@ Main
     overflow-y: hidden;
     overflow-x: hidden;
   }
-  .main .profile .profile-footer .button {
+  .main .profile .profile-footer .button,
+.main .profile--loaded .profile-footer .button {
     width: 50%;
     background-color: white;
     color: #333;
@@ -3603,11 +3639,13 @@ Main
     text-transform: uppercase;
     text-align: center;
   }
-  .main .profile .profile-footer .button:hover {
+  .main .profile .profile-footer .button:hover,
+.main .profile--loaded .profile-footer .button:hover {
     cursor: pointer;
     color: #296eb4;
   }
-  .main .profile .profile-footer .button:last-child {
+  .main .profile .profile-footer .button:last-child,
+.main .profile--loaded .profile-footer .button:last-child {
     border-left: solid 1px #d6d6d6;
   }
 }
@@ -4069,7 +4107,8 @@ Main
   }
 }
 @media (max-width: 45rem) {
-  .main .profile {
+  .main .profile,
+.main .profile--loaded {
     display: flex;
     flex-direction: column;
     background-color: white;
@@ -4083,12 +4122,14 @@ Main
   }
 }
 @media (max-width: 45rem) and (max-width: 22.5rem) {
-  .main .profile {
+  .main .profile,
+.main .profile--loaded {
     margin-top: 7.5rem;
   }
 }
 @media (max-width: 45rem) {
-  .main .profile img {
+  .main .profile img,
+.main .profile--loaded img {
     max-width: 100%;
     min-width: 100%;
     max-height: 20rem;
@@ -4098,39 +4139,47 @@ Main
   }
 }
 @media (max-width: 45rem) and (max-width: 22.5rem) {
-  .main .profile img {
+  .main .profile img,
+.main .profile--loaded img {
     max-height: 15rem;
     min-height: 15rem;
   }
 }
 @media (max-width: 45rem) {
-  .main .profile .profile-body {
+  .main .profile .profile-body,
+.main .profile--loaded .profile-body {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-  .main .profile .profile-body h1 {
+  .main .profile .profile-body h1,
+.main .profile--loaded .profile-body h1 {
     margin-top: 1rem;
     font-size: 1.8rem;
   }
-  .main .profile .profile-body h3 {
+  .main .profile .profile-body h3,
+.main .profile--loaded .profile-body h3 {
     color: #296eb4;
     text-align: center;
     font-size: 1.1rem;
   }
-  .main .profile .profile-body .socials a {
+  .main .profile .profile-body .socials a,
+.main .profile--loaded .profile-body .socials a {
     color: #296eb4;
   }
-  .main .profile .profile-body .socials a i {
+  .main .profile .profile-body .socials a i,
+.main .profile--loaded .profile-body .socials a i {
     font-size: 1.5rem;
     padding: 1rem 0.5rem;
   }
-  .main .profile .profile-body .socials a:hover {
+  .main .profile .profile-body .socials a:hover,
+.main .profile--loaded .profile-body .socials a:hover {
     color: #035eb9;
   }
 }
 @media (max-width: 45rem) {
-  .main .profile .profile-footer {
+  .main .profile .profile-footer,
+.main .profile--loaded .profile-footer {
     display: flex;
     flex-direction: row;
     border-bottom-left-radius: 30px;
@@ -4138,7 +4187,8 @@ Main
     overflow-y: hidden;
     overflow-x: hidden;
   }
-  .main .profile .profile-footer .button {
+  .main .profile .profile-footer .button,
+.main .profile--loaded .profile-footer .button {
     width: 50%;
     background-color: white;
     color: #333;
@@ -4148,11 +4198,13 @@ Main
     text-transform: uppercase;
     text-align: center;
   }
-  .main .profile .profile-footer .button:hover {
+  .main .profile .profile-footer .button:hover,
+.main .profile--loaded .profile-footer .button:hover {
     cursor: pointer;
     color: #296eb4;
   }
-  .main .profile .profile-footer .button:last-child {
+  .main .profile .profile-footer .button:last-child,
+.main .profile--loaded .profile-footer .button:last-child {
     border-left: solid 1px #d6d6d6;
   }
 }
