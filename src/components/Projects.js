@@ -20,7 +20,7 @@ const Projects = ({ projectsRef, language, option }) => {
 			titleSp: 'Servicios de Diseño Web',
 			contentEn: 'Website to offer my services as a e-commerce web developer.',
 			contentSp: 'Página para ofrecer mis servicios de desarrollador para comercios electrónicos',
-			link: 'https://heddrichitsoluciones.online/',
+			link: 'https://heddrichitsoluciones.herokuapp.com/'
 		},
 		{
 			img: ecommerceImg,
@@ -31,7 +31,7 @@ const Projects = ({ projectsRef, language, option }) => {
 			titleSp: 'Página de Comercio Electrónico',
 			contentEn: 'eCommerce website for the Venezuelan market.',
 			contentSp: 'Comercio Electrónico para el mercado Venezolano.',
-			link: 'https://heddrichecommerce.xyz/',
+			link: 'https://ecommercespanish.herokuapp.com/',
 		},
 		{
 			img: myOnlineShopImg,
